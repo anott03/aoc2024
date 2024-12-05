@@ -21,6 +21,7 @@ func main() {
 
 	i := 0
 	yay := true
+	part1 := false // whether we want the answer to part 1 or part 2
 	for i+7 < len(b) {
 		if string(b[i:i+4]) == "do()" {
 			yay = true
@@ -61,7 +62,7 @@ func main() {
 				continue
 			}
 
-			if yay {
+			if part1 || yay {
 				total += num1 * num2
 			}
 		}
